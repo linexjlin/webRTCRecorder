@@ -13,7 +13,6 @@ var log = msg => {
 
 navigator.mediaDevices.getUserMedia({ video: true, audio: true })
   .then(stream => {
-    console.log("xxxx");
     document.getElementById('video1').srcObject = stream
     stream.getTracks().forEach(track => pc.addTrack(track, stream));
 

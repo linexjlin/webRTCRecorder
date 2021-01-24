@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <script src="index.js"></script>
+        <script src="record.js"></script>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        Browser base64 Session Description<br />
+        <textarea id="localSessionDescription" readonly="true"></textarea> <br />
+
+        Golang base64 Session Description<br />
+        <textarea id="remoteSessionDescription"></textarea> <br/>
+        <button onclick="window.startSession()"> Start Session </button><br />
+
+        <br />
+
+        Video<br />
+        <video id="video1" width="160" height="120" autoplay muted></video> <br />
+
+        Logs<br />
+        <div id="logs"></div>
+    </body>
+</html>
