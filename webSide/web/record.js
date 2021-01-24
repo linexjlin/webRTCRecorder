@@ -37,7 +37,8 @@ pc.onicecandidate = event => {
     document.getElementById('localSessionDescription').value = btoa(JSON.stringify(pc.localDescription));
     var channel = "c" + Date.now()
     var dat = {SDP:btoa(JSON.stringify(pc.localDescription)),Channel:"c"+Date.now()};
-    log("Use Channel:",channel)
+    log("开始录制")
+    log("当前通道:"+channel)
     postJSON("https://webrtc-api.chinatcc.com/API/Record",dat,function(req){ 
         console.log(req)
         if (req.responseText.length>0) {
